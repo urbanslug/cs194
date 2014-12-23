@@ -105,6 +105,32 @@ bR fstt secc = do
   let x = battleResults f s
   return x
 
+{-
+Rewriting bR better yet use liftM2
+
+do
+  x <- fstt
+  y <- secc
+  return (battleResults x y)
+
+-- eliminating the 1st assignment
+
+fstt >>= (\x -> do
+  y <- secc
+  return (battleResults x y))
+
+-- eliminating the 2nd assignment
+
+fstt >>= (\x -> secc >>= (\y -> return (battleResults x y)))
+
+-- or without excessive parens
+
+fstt >>= \x -> secc >>= \y -> return (battleResults x y)
+
+-- eliminating “y”
+
+fstt >>= \x -> secc >>= return . battleResults x
+-}
 ch :: IO [DieRoll] -> IO [DieRoll] -> IO ArmyCounts
 ch fstt secc =  secc >>= (\y -> fstt >>= (return . battleResults y))
 

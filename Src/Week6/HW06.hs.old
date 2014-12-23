@@ -1,0 +1,111 @@
+{-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
+
+module HW06 where
+
+import Data.Aeson
+import Data.Monoid
+import GHC.Generics
+-- import Data.Maybe
+
+import qualified Data.ByteString.Lazy.Char8 as B
+import qualified Data.Text as T
+-- import qualified Data.Text.IO as Y
+
+{-
+main :: IO ()
+main = do
+  let inputFile  = "/home/urbanslug/src/haskell/cs194/Src/Week6/markets.json"
+      outputFile = "/home/urbanslug/src/haskell/cs194/Src/Week6/with_bools.json"
+  marketFile <- B.readFile inputFile
+  B.writeFile outputFile $ encode $ ynToBool $ unwrap $ decode marketFile
+-}
+
+booler :: IO ()
+booler = do
+  let inputFile  = "/home/urbanslug/src/haskell/cs194/Src/Week6/markets.json"
+      outputFile = "/home/urbanslug/src/haskell/cs194/Src/Week6/with_bools.json"
+  marketFile <- B.readFile inputFile
+  B.writeFile outputFile (encode $ ynToBool $ unwrap $ decode marketFile)
+
+
+unwrap :: Maybe Value -> Value
+unwrap (Just val) = val
+unwrap Nothing = "Nothing"
+
+
+ynToBool :: Value -> Value
+ynToBool (String "Y") = Bool True
+ynToBool (String "N") = Bool False
+ynToBool (String "")  = String ""
+ynToBool (Object o)   = Object (fmap ynToBool o)
+ynToBool (Array a)    = Array (fmap ynToBool a)
+ynToBool v = v
+
+parseData :: B.ByteString -> Either String Value
+parseData = eitherDecode . encode . ynToBool . unwrap . decode 
+
+data Market = Market {
+    marketname :: !T.Text
+  , x          :: !Float
+  , y          :: !Float
+  , state      :: !T.Text
+ } deriving (Show, Generic)
+
+instance FromJSON Market
+--  a .: "foo" - extract the field named "foo" from the object a, if it exists
+instance ToJSON Market
+
+parseMarkets :: B.ByteString -> Either String [Market]
+parseMarkets = eitherDecode
+
+removeFromEither :: Either String [Market] -> [Market]
+removeFromEither (Right a) = a
+removeFromEither (Left b) = fail b
+
+loadData :: IO [Market]
+loadData = do
+  let inputFile  = "/home/urbanslug/src/haskell/cs194/Src/Week6/markets.json"  
+  marketFile <- B.readFile inputFile
+  return $ removeFromEither $ parseMarkets marketFile
+
+data OrdList a = OrdList { getOrdList :: [a] } deriving (Eq, Show)
+
+instance Ord a => Monoid (OrdList a) where
+  mempty  =  OrdList []
+  mappend = (\(OrdList xs) (OrdList ys) ->  OrdList (xs ++ ys))
+  mconcat = foldr mappend mempty
+
+
+
+inPath :: FilePath
+inPath = "/home/urbanslug/src/haskell/cs194/Src/Week6/markets.json"  
+
+outPath :: FilePath
+outPath = "/home/urbanslug/src/haskell/cs194/Src/Week6/market.json"
+
+pparseData :: IO ()
+pparseData = do
+  c <- B.readFile inPath
+  writeFile outPath (unlines $ f $ removeFromEither (eitherDecode c))
+--  Y.writeFile outPath (T.concat $ f $ removeFromEither (eitherDecode c))
+  
+f :: [Market] -> [String]
+f m = map T.unpack (fmap marketname m)
+
+helpS :: [Market] -> [T.Text]
+helpS m = map marketname m 
+
+searchName :: T.Text -> [Market] -> [T.Text]
+searchName _ [] = [""]
+searchName word martList = map (\a -> case T.isInfixOf word a of True  -> a
+                                                                 False -> "") (helpS martList)
+
+shit :: T.Text -> IO [T.Text]
+shit text = fmap (filter (/= "")) $ fmap (searchName text) loadData
+
+wrapText :: [T.Text] -> OrdList T.Text
+wrapText lst = OrdList lst
+
+type Searcher m = T.Text -> [Market] -> m
+
+-- search :: Monoid m => (Market -> m) -> T.Text -> [Market] -> m

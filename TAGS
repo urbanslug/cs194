@@ -1,0 +1,425 @@
+
+./.cabal-sandbox/share/x86_64-linux-ghc-7.8.3/HUnit-1.2.5.2/examples/Example.hs,318
+module Main Main5,6
+foo foo10,11
+foo foo11,12
+partA partA13,14
+partA partA14,15
+partB partB16,17
+partB partB17,18
+test1 test119,20
+test1 test120,21
+test2 test222,23
+test2 test223,24
+tests tests28,29
+tests tests29,30
+tests' tests'31,32
+tests' tests'32,33
+main main37,38
+main main38,39
+
+./Setup.hs,15
+main main1,2
+
+./Src/Week3/BST.hs,500
+module Src.Week3.BST Src.Week3.BST4,5
+data BST BST9,10
+data BST a = LeafLeaf9,10
+           | Node Node10,11
+isEmpty isEmpty14,15
+isEmpty isEmpty15,16
+isBSTBetween isBSTBetween19,20
+isBSTBetween isBSTBetween24,25
+isBST isBST37,38
+isBST isBST38,39
+getElements getElements41,42
+getElements getElements42,43
+instance instance49,50
+mk_tree mk_tree52,53
+mk_tree mk_tree53,54
+prop_ordered prop_ordered59,60
+prop_ordered prop_ordered60,61
+test test66,67
+test test67,68
+
+./Src/Week3/HW04.hs,848
+module HW04 HW040,1
+ex1 ex19,10
+ex1 ex110,11
+ex2 ex215,16
+ex2 ex216,17
+ex3 ex320,21
+ex3 ex321,22
+ex4 ex427,28
+ex4 ex428,29
+ex5 ex533,34
+ex5 ex534,35
+ex6 ex637,38
+ex6 ex638,39
+ex7 ex743,44
+ex7 ex744,45
+ex8 ex847,48
+ex8 ex848,49
+ex9 ex952,53
+ex9 ex953,54
+ex10 ex1057,58
+ex10 ex1058,59
+ex11 ex1162,63
+ex11 ex1163,64
+ex12 ex1267,68
+ex12 ex1268,69
+insertBST insertBST71,72
+insertBST insertBST72,73
+safeHead safeHead78,79
+safeHead safeHead79,80
+safeTail safeTail82,83
+safeTail safeTail83,84
+allCaps allCaps86,87
+allCaps allCaps89,90
+dropTrailingWhitespace dropTrailingWhitespace91,92
+dropTrailingWhitespace dropTrailingWhitespace92,93
+firstLetters firstLetters94,95
+--firstLetters --firstLetters97,98
+firstLetters firstLetters98,99
+asList asList100,101
+asList asList101,102
+
+./Src/Week5/Parser.hs,905
+module Src.Week5.Parser Src.Week5.Parser3,4
+newtype State State15,16
+newtype State s r = State State15,16
+instance instance17,18
+type Parser Parser33,34
+type Parser a a33,34
+space space36,37
+space space37,38
+eatSpace eatSpace44,45
+eatSpace eatSpace45,46
+char char48,49
+char char49,50
+eof eof55,56
+eof eof56,57
+don'tParse don'tParse60,61
+don'tParse don'tParse61,62
+parseExpr, parseTerm, parseAtom parseAtom65,66
+parseExpr, parseTerm,parseTerm65,66
+parseExpr,parseExpr65,66
+parseExpr parseExpr66,67
+parseTerm parseTerm68,69
+parseAtom parseAtom70,71
+parseLit parseLit72,73
+parseLit parseLit73,74
+buildOp buildOp75,76
+op op79,80
+op op80,81
+parens parens85,86
+parens parens86,87
+execParser execParser90,91
+execParser execParser91,92
+evalParser evalParser94,95
+evalParser evalParser95,96
+parseRing parseRing99,100
+parseRing parseRing100,101
+
+./Src/Week5/HW05.hs,382
+module HW05 HW057,8
+instance instance15,16
+bool2Int bool2Int27,28
+bool2Int bool2Int28,29
+testBool testBool33,34
+testBool testBool34,35
+testInteger testInteger45,46
+testInteger testInteger46,47
+testIntegerII testIntegerII48,49
+testIntegerII testIntegerII49,50
+data Mod5 Mod560,61
+data Mod5 = MkMod MkMod60,61
+testMod5 testMod576,77
+testMod5 testMod577,78
+
+./Src/Week5/Ring.hs,569
+module Src.Week5.Ring Src.Week5.Ring3,4
+class Ring Ring11,12
+class Ring Ring11,12
+  addId addId12,13
+  addInv addInv13,14
+  mulId mulId14,15
+  add add16,17
+  mul mul17,18
+class Parsable Parsable20,21
+class Parsable Parsable20,21
+  parse parse24,25
+instance instance27,28
+data RingExpr RingExpr41,42
+data RingExpr a = Lit Lit41,42
+                | AddIdAddId42,43
+                | AddInv AddInv43,44
+                | MulIdMulId44,45
+                | Add Add45,46
+                | Mul Mul46,47
+eval eval61,62
+eval eval62,63
+
+./Src/Week8/HW08.hs,877
+module HW08 HW080,1
+specialNumbers specialNumbers29,30
+specialNumbers specialNumbers30,31
+type StdRand StdRand32,33
+type Army Army34,35
+type DieRoll DieRoll36,37
+data ArmyCounts ArmyCounts38,39
+data ArmyCounts = ArmyCounts ArmyCounts38,39
+data ArmyCounts = ArmyCounts { attackers attackers38,39
+data ArmyCounts = ArmyCounts { attackers :: Army, defenders defenders38,39
+instance instance41,42
+dieRoll dieRoll47,48
+dieRoll dieRoll48,49
+dec dec50,51
+dec dec51,52
+battleResults battleResults55,56
+battleResults battleResults56,57
+battle battle80,81
+battle battle81,82
+invade invade86,87
+invade invade87,88
+dice dice90,91
+dice dice91,92
+tr tr93,94
+tr tr94,95
+extractRoll extractRoll97,98
+extractRoll extractRoll98,99
+bR bR100,101
+bR bR101,102
+ch ch107,108
+ch ch108,109
+battleF battleF110,111
+battleF battleF111,112
+
+./Src/Week6/TestHW06.hs,158
+module Src.Week6.TestHW06 Src.Week6.TestHW060,1
+inputFile inputFile7,8
+inputFile inputFile8,9
+outputFile outputFile10,11
+outputFile outputFile11,12
+
+./Src/Week6/Types.hs,1701
+module Types Types2,3
+data Market Market11,12
+data Market = Market Market11,12
+    mktFmid:mktFmid12,13
+    mktMarketname:mktMarketname13,14
+    mktWebsite:mktWebsite14,15
+    mktStreet:mktStreet15,16
+    mktCity:mktCity16,17
+    mktCounty:mktCounty17,18
+    mktState:mktState18,19
+    mktZip:mktZip19,20
+    mktSeason1date:mktSeason1date20,21
+    mktSeason1time:mktSeason1time21,22
+    mktSeason2date:mktSeason2date22,23
+    mktSeason2time:mktSeason2time23,24
+    mktSeason3date:mktSeason3date24,25
+    mktSeason3time:mktSeason3time25,26
+    mktSeason4date:mktSeason4date26,27
+    mktSeason4time:mktSeason4time27,28
+    mktX:mktX28,29
+    mktY:mktY29,30
+    mktLocation:mktLocation30,31
+    mktCredit:mktCredit31,32
+    mktWic:mktWic32,33
+    mktWiccash:mktWiccash33,34
+    mktSfmnp:mktSfmnp34,35
+    mktSnap:mktSnap35,36
+    mktBakedgoods:mktBakedgoods36,37
+    mktCheese:mktCheese37,38
+    mktCrafts:mktCrafts38,39
+    mktFlowers:mktFlowers39,40
+    mktEggs:mktEggs40,41
+    mktSeafood:mktSeafood41,42
+    mktHerbs:mktHerbs42,43
+    mktVegetables:mktVegetables43,44
+    mktHoney:mktHoney44,45
+    mktJams:mktJams45,46
+    mktMaple:mktMaple46,47
+    mktMeat:mktMeat47,48
+    mktNursery:mktNursery48,49
+    mktNuts:mktNuts49,50
+    mktPlants:mktPlants50,51
+    mktPoultry:mktPoultry51,52
+    mktPrepared:mktPrepared52,53
+    mktSoap:mktSoap53,54
+    mktTrees:mktTrees54,55
+    mktWine:mktWine55,56
+    mktUpdatetime:mktUpdatetime56,57
+instance instance59,60
+decodeMarkets decodeMarkets111,112
+decodeMarkets decodeMarkets112,113
+printMarkets printMarkets114,115
+printMarkets printMarkets115,116
+
+./Src/Week6/HW06.hs,1428
+module HW06 HW0610,11
+inputFile inputFile23,24
+inputFile inputFile24,25
+outputFile outputFile26,27
+outputFile outputFile27,28
+ynToBool ynToBool29,30
+ynToBool ynToBool30,31
+parseData parseData36,37
+parseData parseData37,38
+data Market Market39,40
+data Market = Market Market39,40
+data Market = Market { marketname marketname39,40
+                     ,  x x40,41
+                     ,  y y41,42
+                     ,  state state42,43
+nullMarket nullMarket52,53
+nullMarket nullMarket53,54
+parseMarkets parseMarkets55,56
+parseMarkets parseMarkets56,57
+removeResult removeResult61,62
+removeResult removeResult62,63
+loadData loadData68,69
+loadData loadData69,70
+getMarket getMarket74,75
+getMarket getMarket75,76
+data OrdList OrdList78,79
+data OrdList a = OrdList OrdList78,79
+data OrdList a = OrdList { getOrdList getOrdList78,79
+instance instance81,82
+type Searcher Searcher89,90
+type Searcher m m89,90
+search search91,92
+search search92,93
+makeMonoid makeMonoid95,96
+makeMonoid makeMonoid96,97
+matchName matchName100,101
+matchName matchName101,102
+firstFound firstFound106,107
+firstFound firstFound107,108
+lastFound lastFound112,113
+lastFound lastFound113,114
+allFound allFound118,119
+allFound allFound119,120
+numberFound numberFound121,122
+numberFound numberFound122,123
+orderedNtoS orderedNtoS124,125
+orderedNtoS orderedNtoS125,126
+
+./Src/Main.hs,22
+module Main Main0,1
+
+./Src/Week7/HW07.hs,829
+module HW07 HW070,1
+fib fib4,5
+fib fib5,6
+fibs1 fibs19,10
+fibs1 fibs110,11
+fibs2 fibs212,13
+fibs2 fibs213,14
+data Stream Stream16,17
+data Stream a = Cons Cons16,17
+streamToList streamToList18,19
+streamToList streamToList19,20
+countFrom countFrom21,22
+countFrom countFrom22,23
+listToStream listToStream24,25
+listToStream listToStream25,26
+instance instance27,28
+streamRepeat streamRepeat31,32
+streamRepeat streamRepeat32,33
+streamMap streamMap34,35
+streamMap streamMap35,36
+streamFromSeed streamFromSeed37,38
+streamFromSeed streamFromSeed38,39
+nats nats40,41
+nats nats41,42
+randomList randomList46,47
+randomList randomList47,48
+randomInts randomInts49,50
+randomInts randomInts50,51
+f f56,57
+f f57,58
+getStdRanddom getStdRanddom60,61
+getStdRanddom getStdRanddom61,62
+
+./Src/Week2/Log.hs,764
+module Src.Week2.Log Src.Week2.Log2,3
+data MessageType MessageType8,9
+data MessageType = InfoInfo8,9
+                 | WarningWarning9,10
+                 | Error Error10,11
+type TimeStamp TimeStamp14,15
+data LogMessage LogMessage16,17
+data LogMessage = LogMessage LogMessage16,17
+instance instance19,20
+data MaybeLogMessage MaybeLogMessage23,24
+data MaybeLogMessage = ValidLM ValidLM23,24
+                     | InvalidLM InvalidLM24,25
+data MaybeInt MaybeInt27,28
+data MaybeInt = ValidInt ValidInt27,28
+              | InvalidIntInvalidInt28,29
+readInt readInt36,37
+readInt readInt37,38
+testParse testParse43,44
+testParse testParse47,48
+testWhatWentWrong testWhatWentWrong54,55
+testWhatWentWrong testWhatWentWrong58,59
+
+./Src/Week2/LogAnalysis.hs,932
+module LogAnalysis LogAnalysis2,3
+parseMessage parseMessage8,9
+parseMessage parseMessage9,10
+parseErrorFile parseErrorFile18,19
+parseErrorFile parseErrorFile19,20
+validMessagesOnly validMessagesOnly24,25
+validMessagesOnly validMessagesOnly25,26
+parse parse35,36
+parse parse36,37
+compareMsgs compareMsgs38,39
+compareMsgs compareMsgs39,40
+sortMessages sortMessages42,43
+sortMessages sortMessages43,44
+getMessageType getMessageType52,53
+getMessageType getMessageType53,54
+getMessageItself getMessageItself55,56
+getMessageItself getMessageItself56,57
+getErrorMessages getErrorMessages58,59
+getErrorMessages getErrorMessages59,60
+whatWentWrong whatWentWrong71,72
+whatWentWrong whatWentWrong72,73
+messagesAbout messagesAbout77,78
+messagesAbout messagesAbout78,79
+whatWentWrongEnhanced whatWentWrongEnhanced84,85
+whatWentWrongEnhanced whatWentWrongEnhanced85,86
+(|||)|||88,89
+(|(89,90
+
+./dist/build/autogen/Paths_cs194.hs,960
+module Paths_cs194 Paths_cs1940,1
+catchIO catchIO11,12
+catchIO catchIO12,13
+version version15,16
+version version16,17
+bindir, libdir, datadir, libexecdir, sysconfdir sysconfdir17,18
+bindir, libdir, datadir, libexecdir,libexecdir17,18
+bindir, libdir, datadir,datadir17,18
+bindir, libdir,libdir17,18
+bindir,bindir17,18
+bindir bindir19,20
+libdir libdir20,21
+datadir datadir21,22
+libexecdir libexecdir22,23
+sysconfdir sysconfdir23,24
+getBinDir, getLibDir, getDataDir, getLibexecDir, getSysconfDir getSysconfDir25,26
+getBinDir, getLibDir, getDataDir, getLibexecDir,getLibexecDir25,26
+getBinDir, getLibDir, getDataDir,getDataDir25,26
+getBinDir, getLibDir,getLibDir25,26
+getBinDir,getBinDir25,26
+getBinDir getBinDir26,27
+getLibDir getLibDir27,28
+getDataDir getDataDir28,29
+getLibexecDir getLibexecDir29,30
+getSysconfDir getSysconfDir30,31
+getDataFileName getDataFileName32,33
+getDataFileName getDataFileName33,34
